@@ -1,26 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../css/TodoApp.css";
-import TodoForm from "./TodoForm.js";
-import TodoListFilter from "./TodoListFilter.js";
-import Todo from "./Todo.js";
+import TodoForm from "../components/TodoForm.js";
+import TodoListFilter from "../components/TodoListFilter.js";
+import Todo from "../components/Todo.js";
 
 export default function TodoApp() {
-  const [tasks, setTasks] = useState(() => {
-    try {
-      const savedTasks = localStorage.getItem("tasks");
-      return savedTasks ? JSON.parse(savedTasks) : [];
-    } catch (error) {
-      console.error("Error loading tasks from LocalStorage", error);
-      return [];
-    }
-  });
-
+  const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
 
   const addTask = (text) => {
     if (text.trim()) {
@@ -55,6 +42,8 @@ export default function TodoApp() {
     <div className="todo-container">
       <h1 className="todo-title">To-Do List</h1>
 
+      <TodoForm addTask={addTask} />
+
       <input
         type="text"
         placeholder="Search tasks..."
@@ -62,8 +51,6 @@ export default function TodoApp() {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-input"
       />
-
-      <TodoForm addTask={addTask} />
       <TodoListFilter filter={filter} setFilter={setFilter} />
 
       <ul className="task-list">

@@ -1,12 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import TodoApp from "./components/TodoApp";
+import { BrowserRouter } from "react-router-dom";
+import AppMenu from "./AppMenu";
 
 function App() {
   return (
-    <div className="App">
-      <TodoApp />
-    </div>
+    <BrowserRouter>
+      <AppMenu />
+    </BrowserRouter>
   );
 }
 
