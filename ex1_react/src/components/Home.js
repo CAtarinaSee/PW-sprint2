@@ -17,13 +17,13 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "TodoAppLocalStorage",
+      title: "TodoApp2",
       description:
         "Esta versão do TodoApp guarda as tarefas no Local Storage para que não se percam ao recarregar a página.",
     },
     {
       id: 3,
-      title: "TodoAppContador",
+      title: "TodoApp3",
       description:
         "O TodoAppContador adiciona um contador de tarefas completas para melhor controlo da produtividade.",
     },

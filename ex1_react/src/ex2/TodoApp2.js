@@ -4,13 +4,22 @@ import TodoForm from "../components/TodoForm.js";
 import TodoListFilter from "../components/TodoListFilter.js";
 import Todo from "../components/Todo.js";
 
-export default function TodoAppContador() {
-  const [tasks, setTasks] = useState([]);
+export default function TodoApp2() {
+  const [tasks, setTasks] = useState(() => {
+    try {
+      const savedTasks = localStorage.getItem("tasks");
+      return savedTasks ? JSON.parse(savedTasks) : [];
+    } catch (error) {
+      console.error("Error loading tasks from LocalStorage", error);
+      return [];
+    }
+  });
+
   const [filter, setFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    document.title = `(${tasks.length}) To-Do List`;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const addTask = (text) => {
@@ -44,7 +53,7 @@ export default function TodoAppContador() {
 
   return (
     <div className="todo-container">
-      <h1 className="todo-title">To-Do List ({tasks.length})</h1>
+      <h1 className="todo-title">To-Do List</h1>
 
       <TodoForm addTask={addTask} />
 
