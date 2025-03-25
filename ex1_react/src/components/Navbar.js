@@ -17,6 +17,9 @@ const Navbar = () => {
         <li>
           <Link to="/ex3">TodoAppContador</Link>
         </li>
+        <li>
+          <Link to="/ex4">Atm</Link>
+        </li>
       </ul>
     </nav>
   );

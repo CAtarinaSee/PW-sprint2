@@ -1,0 +1,90 @@
+/* Estilo geral do container */
+.atm-container {
+  background-color: #b0c4de; /* Azul claro */
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  width: 50%;
+  margin: 50px auto;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Estiliza o título */
+.atm-container h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2f4f4f;
+}
+
+/* Estiliza o saldo */
+.saldo {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2e8b57;
+}
+
+/* Container para o input e botões */
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Caixa de input */
+input[type="number"] {
+  width: 120px;
+  padding: 10px;
+  font-size: 1.3em;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #4caf50; /* Verde ao focar */
+}
+
+/* Estilo dos botões */
+button {
+  background: linear-gradient(to right, #4caf50, #2e8b57); /* Degradê verde */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(to right, #45a049, #228b22);
+  transform: scale(1.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+  color: #d9534f;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação para suavizar a aparição da mensagem */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
