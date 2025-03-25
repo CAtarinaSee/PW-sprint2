@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Home() {
   const [selectedDetail, setSelectedDetail] = useState("");
 
-  console.log("Home renderizou!"); // ✅ Testa se o componente está a ser chamado
+  //console.log("Home renderizou!");  ✅ Testa se o componente está a ser chamado
 
   const dados = [
     {
