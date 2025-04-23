@@ -1,13 +1,3 @@
-body {
-  background: linear-gradient(to right, #4a90e2, #c8b0ff);
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
 h1 {
   font-size: 50px;
   font-weight: bold;
@@ -124,9 +114,9 @@ p {
 }
 
 .filter-buttons button:hover {
-  background: #4a90e2;
+  /* background: #4a90e2; */
   color: white;
-  border-color: #4a90e2;
+  /* border-color: #4a90e2; */
 }
 
 .filter-buttons .active {
@@ -149,18 +139,6 @@ p {
   border-radius: 8px;
   font-size: 16px;
   box-sizing: border-box;
-}
-
-/* Fundo gradiente suave */
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  font-family: "Arial", sans-serif;
-  color: white;
 }
 
 /* Estilo para a navegação */
@@ -203,7 +181,7 @@ p {
   margin-bottom: 15px;
 }
 
-/* Botões */
+/* Botões
 .home-button {
   background-color: #ffcc00;
   border: none;
@@ -217,4 +195,4 @@ p {
 
 .home-button:hover {
   background-color: #ffaa00;
-}
+} */
