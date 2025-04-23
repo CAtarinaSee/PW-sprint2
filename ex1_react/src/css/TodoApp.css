@@ -141,7 +141,7 @@ p {
   box-sizing: border-box;
 }
 
-/* Estilo para a navegação */
+/* Estilo para a navegação
 .nav-links {
   list-style: none;
   padding: 0;
@@ -162,7 +162,7 @@ p {
 .nav-links a:hover {
   text-decoration: underline;
   color: #ffcc00;
-}
+} */
 
 /* Caixa central estilo card */
 .home-card {
