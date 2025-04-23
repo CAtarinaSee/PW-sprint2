@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { depositar, levantar } from "./AtmSlice";
+import "../css/Atm.css"; // Importa o CSS para estilizar a máquina multibanco
 
 const Atm = () => {
   const saldo = useSelector((state) => state.atm.saldo);

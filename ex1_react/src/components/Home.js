@@ -1,6 +1,6 @@
 import "../css/TodoApp.css";
 import "../App.css";
-import "../css/Home.css";
+// import "../css/Home.css";
 import { useState } from "react";
 
 export default function Home() {

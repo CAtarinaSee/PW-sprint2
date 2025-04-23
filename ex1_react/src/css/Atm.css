@@ -1,13 +1,12 @@
 /* Estilo geral do container */
 .atm-container {
-  background-color: #b0c4de; /* Azul claro */
-  padding: 30px;
+  background: transparent; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Largura máxima maior */
+  margin: 20px auto; /* Centraliza o container */
   text-align: center;
-  border-radius: 15px;
-  width: 50%;
-  margin: 50px auto;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
 }
 
 /* Estiliza o título */
@@ -15,7 +14,7 @@
   font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #2f4f4f;
+  color: #ffffff;
 }
 
 /* Estiliza o saldo */
@@ -23,7 +22,7 @@
   font-size: 1.8em;
   font-weight: 700;
   margin-bottom: 25px;
-  color: #2e8b57;
+  color: #ffffff;
 }
 
 /* Container para o input e botões */
@@ -40,20 +39,20 @@ input[type="number"] {
   padding: 10px;
   font-size: 1.3em;
   text-align: center;
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   border-radius: 8px;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
 input[type="number"]:focus {
-  border-color: #4caf50; /* Verde ao focar */
+  border-color: #a73cbe;
 }
 
 /* Estilo dos botões */
 button {
-  background: linear-gradient(to right, #4caf50, #2e8b57); /* Degradê verde */
-  color: white;
+  background: white; /* Fundo branco */
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 8px;
   padding: 14px 24px;
@@ -65,7 +64,8 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #45a049, #228b22);
+  background: linear-gradient(to right, #9145a0, #941aa9);
+  color: white;
   transform: scale(1.05);
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
 }
